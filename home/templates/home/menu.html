@@ -1,0 +1,25 @@
+{% load wagtailcore_tags %}
+        <header>
+            <input type="checkbox" id="menu_checkbox">
+            <div id="menu_button">
+                <label for="menu_checkbox"><h3></h3></label>
+            </div>
+            <nav>
+                <ul>
+                    {% with self.get_site.root_page.specific as root %}
+                        {% for child in root.get_children.live.in_menu %}
+                            <a href="{% pageurl child %}"
+                                {% if self.id == child.id %}
+                                    class="active"
+                                {% endif %}
+                            >
+                                <li>
+                                    <h3>{{ child }}</h3>
+                                </li>
+                            </a>
+                        {% endfor %}
+                    {% endwith %}
+                </ul>
+            </nav>
+        </header>
+

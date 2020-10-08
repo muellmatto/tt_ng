@@ -1,0 +1,25 @@
+{% extends "home/base.html" %}
+{% load wagtailcore_tags static wagtailimages_tags %}
+    {% block content %}
+        {% include "home/menu.html" %}
+        <main>
+            <article>
+                <section>
+                    <ul>
+                        {% for work in page.get_children.live.specific %}
+                            {% image work.coverimage fill-400x400 jpegquality-90 as img %}
+                                <a href="{% pageurl work %}">
+                                    <li>
+                                        <h3>{{ work.title }}</h3>
+                                        <div class="portfolio_item"
+                                             style="background: url({{ img.url }})"
+                                        >
+                                        </div>
+                                    </li>
+                                </a>
+                        {% endfor %}
+                    </ul>
+                </section>
+            </article>
+        </main>
+    {% endblock content %}

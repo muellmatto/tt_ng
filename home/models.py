@@ -30,21 +30,21 @@ class StartPage(Page):
         related_name='+'
     )
     next_page = models.ForeignKey(
-        #'wagtailcore.Page',
-        'home.StartPage',
+        'wagtailcore.Page',
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
         related_name='+'
     )
     content_panels = Page.content_panels + [
-        ImageChooserPanel('picture')
+        ImageChooserPanel('picture'),
+        PageChooserPanel('next_page')
     ]
 
 class WebPage(Page):
     """ This is normal page"""
     show_in_menus_default = True
-    # parent_page_types = ['home.StartPage']
+    parent_page_types = ['home.StartPage']
     body = StreamField (
         [
             ( 'paragraph', blocks.RichTextBlock(

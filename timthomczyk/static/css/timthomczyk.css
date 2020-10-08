@@ -303,4 +303,9 @@ template {
 [hidden] {
   display: none; }
 
+.portfolio_item {
+  width: 400px;
+  height: 400px;
+  background-size: cover; }
+
 /*# sourceMappingURL=timthomczyk.css.map */

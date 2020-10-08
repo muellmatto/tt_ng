@@ -1,0 +1,20 @@
+{% extends "home/base.html" %}
+{% load wagtailcore_tags static wagtailimages_tags %}
+
+{% block content %}
+    {% include "home/menu.html" %}
+    <main>
+        <article>
+            {% for block in page.body %}
+                <section>
+                    {% if block.block_type == 'Picture' %}
+                        {% image block.value max-1200x1200 jpegquality-90 %}
+                    {% else %}
+                        {% include_block block %}
+                    {% endif %}
+                </section>
+            {% endfor %}
+        </article>
+    </main>
+{% endblock content %}
+
