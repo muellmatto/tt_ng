@@ -4,17 +4,20 @@
         {% include "home/menu.html" %}
         <main>
             <article>
-                <section>
+                <section class="gallery">
                     <ul>
                         {% for work in page.get_children.live.specific %}
-                            {% image work.coverimage fill-400x400 jpegquality-90 as img %}
+                            {% image work.coverimage fill-900x900 jpegquality-90 as img %}
                                 <a href="{% pageurl work %}">
                                     <li>
-                                        <h3>{{ work.title }}</h3>
-                                        <div class="portfolio_item"
-                                             style="background: url({{ img.url }})"
-                                        >
-                                        </div>
+                                        <figure>
+                                            <!-- div class="portfolio_item"
+                                                 style="background: url({{ img.url }})"
+                                            >
+                                            </div -->
+                                            <img src="{{img.url}}">
+                                            <figcaption>{{ work.title }}</figcaption>
+                                        </figure>
                                     </li>
                                 </a>
                         {% endfor %}

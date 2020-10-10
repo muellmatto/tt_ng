@@ -23,6 +23,8 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 
 # Application definition
 
+WAGTAILEMBEDS_RESPONSIVE_HTML = True
+WAGTAIL_ENABLE_UPDATE_CHECK = False
 INSTALLED_APPS = [
     'home',
 

@@ -1,2 +1,14 @@
-$font_color: rgba(66, 66, 66, 1);
+@import url('https://fonts.googleapis.com/css2?family=Commissioner&display=swap');
+
+// typography
+$font_family: 'Commissioner', sans-serif;
+$line_height: 1.3em;
+
+// colors
+$font_color: #2d2924;
+$accent_color: #f08000;
+
+// geometry
+$layout_width: 40rem;
+$layout_padding: 0.5rem;
 
