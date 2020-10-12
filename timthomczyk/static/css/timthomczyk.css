@@ -333,6 +333,12 @@ img, video {
   max-width: 100%;
   height: auto; }
 
+.align_right {
+  text-align: right; }
+
+.align_center {
+  text-align: center; }
+
 .portfolio_item {
   width: 400px;
   height: 400px;
