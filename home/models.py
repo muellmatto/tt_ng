@@ -12,13 +12,12 @@ from wagtail.core import blocks
 from wagtail.core.fields import StreamField
 from wagtail.core.models import Page
 
-from wagtail.documents.edit_handlers import DocumentChooserPanel
-
 from wagtail.embeds.blocks import EmbedBlock
 
 from wagtail.images.blocks import ImageChooserBlock
 from wagtail.images.edit_handlers import ImageChooserPanel
 
+from wagtailmedia.edit_handlers import MediaChooserPanel
 
 class StartPage(Page):
     show_in_menus_default = False
@@ -32,7 +31,7 @@ class StartPage(Page):
         related_name='+'
     )
     video = models.ForeignKey (
-        'wagtaildocs.Document',
+        'wagtailmedia.Media',
         null=True,
         blank=True,
         on_delete=models.SET_NULL,
@@ -47,7 +46,7 @@ class StartPage(Page):
     )
     content_panels = Page.content_panels + [
         ImageChooserPanel('picture'),
-        DocumentChooserPanel('video'),
+        MediaChooserPanel('video'),
         PageChooserPanel('next_page')
     ]
 

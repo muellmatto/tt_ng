@@ -27,6 +27,7 @@ WAGTAILEMBEDS_RESPONSIVE_HTML = True
 WAGTAIL_ENABLE_UPDATE_CHECK = False
 INSTALLED_APPS = [
     'home',
+    'wagtailmedia',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
