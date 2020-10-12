@@ -5,7 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Commissioner&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -305,21 +305,26 @@ template {
   display: none; }
 
 body {
-  font-family: "Commissioner", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
   line-height: 1.3em;
-  color: #534d45;
-  background: #f5f5ff; }
+  color: black;
+  background: white; }
 
-h1, h2, h3, h4 {
-  font-family: monospace; }
+h1, h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: black; }
 
 main, footer, .nav_container {
   display: block;
   max-width: 40rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
   margin-left: auto;
   margin-right: auto; }
+
+h1, h2, p, .nav_container {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; }
 
 img {
   max-width: 100%;
@@ -368,7 +373,7 @@ header {
 #menu_button {
   margin-top: 1rem; }
   #menu_button img {
-    width: 2rem;
+    width: 2.6rem;
     animation-name: spin;
     animation-duration: 60000ms;
     animation-iteration-count: infinite;
@@ -382,16 +387,17 @@ header {
 #menu_checkbox {
   display: none; }
   #menu_checkbox:checked ~ nav {
-    transition: opacity 1s 0s, max-height 0s 0s;
+    transition: opacity 0.5s 0s, max-height 0s 0s;
     max-height: 100vh;
-    opacity: 1; }
+    opacity: 1;
+    overflow: visible; }
 
 nav {
   overflow: hidden;
   width: 100vw;
   max-height: 0rem;
   opacity: 0;
-  transition: opacity 1s, max-height 0s 1s; }
+  transition: opacity 0.5s, max-height 0s 0.5s; }
   nav ul {
     display: flex;
     flex-direction: column;
@@ -402,7 +408,20 @@ nav {
     margin: 0; }
     nav ul li {
       padding-top: 1rem;
-      display: block; }
+      display: block;
+      font-weight: 500;
+      text-shadow: 1px 3px 0 white, 1px 2px white, 1px 1px white;
+      /*
+      text-shadow: 1px 1px 0 #000,
+          -1px 1px 0 #000,
+          1px -1px 0 #000,
+          -1px -1px 0 #000,
+          0px 1px 0 #000,
+          0px -1px 0 #000,
+          -1px 0px 0 #000,
+          1px 0px 0 #000;
+          */
+      font-size: 1.4rem; }
     nav ul a {
       text-decoration: none;
       color: #f08000; }

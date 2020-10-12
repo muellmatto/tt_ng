@@ -3,22 +3,27 @@
 
 body {
     font-family: $font_family;
+    font-weight: $font_weight;
     line-height: $line_height;
     color: $font_color;
     background: $body_background;
 }
-h1, h2, h3, h4 {
+h1, h2 {
     font-family: $font_family_2;
+    font-weight: $font_weight_2;
+    color: $font_color;
 }
 main, footer, .nav_container {
     display: block;
     max-width: $layout_width;
-    padding-left: $layout_padding;
-    padding-right: $layout_padding;
     margin-left: auto;
     margin-right: auto;
 }
-
+// layout padding
+h1, h2, p, .nav_container {
+    padding-left: $layout_padding;
+    padding-right: $layout_padding;
+}
 img {
     max-width: 100%;
     height: auto;
@@ -76,7 +81,7 @@ header {
 #menu_button {
     margin-top: 1rem;
     img {
-        width: 2rem;
+        width: 2.6rem;
         animation-name: spin;
         animation-duration: 60*1000ms;
         animation-iteration-count: infinite;
@@ -94,9 +99,10 @@ header {
 #menu_checkbox {
     display: none;
     &:checked ~ nav {
-        transition: opacity 1s 0s, max-height 0s 0s;
+        transition: opacity 0.5s 0s, max-height 0s 0s;
         max-height: 100vh;
         opacity: 1;
+        overflow: visible;
     }
 }
 nav {
@@ -104,7 +110,7 @@ nav {
     width: 100vw;
     max-height: 0rem;
     opacity: 0;
-    transition: opacity 1s, max-height 0s 1s;
+    transition: opacity 0.5s, max-height 0s 0.5s;
     ul {
         display: flex;
         flex-direction: column;
@@ -116,6 +122,22 @@ nav {
         li {
             padding-top: 1rem;
             display: block;
+            font-weight: $font_weight_2;
+            // -webkit-text-stroke: 1px white;
+            text-shadow: 1px 3px 0 white,
+                1px 2px white,
+                1px 1px white;
+            /*
+            text-shadow: 1px 1px 0 #000,
+                -1px 1px 0 #000,
+                1px -1px 0 #000,
+                -1px -1px 0 #000,
+                0px 1px 0 #000,
+                0px -1px 0 #000,
+                -1px 0px 0 #000,
+                1px 0px 0 #000;
+                */
+            font-size: 1.4rem;
         }
         a {
             text-decoration: none;
