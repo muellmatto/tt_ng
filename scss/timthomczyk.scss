@@ -5,6 +5,10 @@ body {
     font-family: $font_family;
     line-height: $line_height;
     color: $font_color;
+    background: $body_background;
+}
+h1, h2, h3, h4 {
+    font-family: $font_family_2;
 }
 main, footer, .nav_container {
     display: block;
@@ -66,12 +70,25 @@ header {
     top: 0;
     width: 100%;
     &+main {
-        margin-top: 3rem;
+        margin-top: 4rem;
     }
 }
 #menu_button {
-    h3::after {
-        content: '≡';
+    margin-top: 1rem;
+    img {
+        width: 2rem;
+        animation-name: spin;
+        animation-duration: 60*1000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+    transform: rotate(360deg);
     }
 }
 #menu_checkbox {
@@ -80,12 +97,6 @@ header {
         transition: opacity 1s 0s, max-height 0s 0s;
         max-height: 100vh;
         opacity: 1;
-    }
-    &:checked ~ #menu_button {
-        background-image: none;
-        h3::after {
-            content: '×';
-        }
     }
 }
 nav {
