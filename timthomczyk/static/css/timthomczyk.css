@@ -304,6 +304,9 @@ template {
 [hidden] {
   display: none; }
 
+* {
+  box-sizing: border-box; }
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -326,7 +329,7 @@ h1, h2, p, .nav_container {
   padding-left: 0.5rem;
   padding-right: 0.5rem; }
 
-img {
+img, video {
   max-width: 100%;
   height: auto; }
 
@@ -425,5 +428,15 @@ nav {
     nav ul a {
       text-decoration: none;
       color: #f08000; }
+
+.start_page {
+  display: flex;
+  height: 100vh;
+  padding: 0.5rem;
+  align-items: center;
+  justify-content: center; }
+  .start_page img, .start_page video {
+    max-width: 100%;
+    max-height: 100%; }
 
 /*# sourceMappingURL=timthomczyk.css.map */

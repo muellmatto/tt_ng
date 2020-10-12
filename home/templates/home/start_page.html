@@ -2,10 +2,22 @@
 {% load wagtailcore_tags static wagtailimages_tags %}
     {% block content %}
         <main>
-            <article>
-                <a href="{% if page.next_page %}{% pageurl page.next_page %}{% else %}#{% endif %}">
-                    {% image page.picture max-1200x1200 jpegquality-90 %}
-                </a>
-            </article>
+            <a href="{% if page.next_page %}{% pageurl page.next_page %}{% else %}#{% endif %}">
+                <article class="start_page">
+                    {% if page.video %}
+                    <video src="{{ page.video.url}}" autoplay loop muted nocontrols>
+                        {% if page.picture %}
+                            {% image page.picture max-1200x1200 jpegquality-90 %}
+                        {% else %}
+                            ENTER
+                        {% endif %}
+                    </video>
+                    {% elif page.picture %}
+                        {% image page.picture max-1200x1200 jpegquality-90 %}
+                    {% else %}
+                        ENTER
+                    {% endif %}
+                </article>
+            </a>
         </main>
     {% endblock content %}

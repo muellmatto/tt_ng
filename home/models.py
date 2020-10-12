@@ -12,6 +12,8 @@ from wagtail.core import blocks
 from wagtail.core.fields import StreamField
 from wagtail.core.models import Page
 
+from wagtail.documents.edit_handlers import DocumentChooserPanel
+
 from wagtail.embeds.blocks import EmbedBlock
 
 from wagtail.images.blocks import ImageChooserBlock
@@ -29,6 +31,13 @@ class StartPage(Page):
         on_delete=models.SET_NULL,
         related_name='+'
     )
+    video = models.ForeignKey (
+        'wagtaildocs.Document',
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name='+'
+    )
     next_page = models.ForeignKey(
         'wagtailcore.Page',
         null=True,
@@ -38,6 +47,7 @@ class StartPage(Page):
     )
     content_panels = Page.content_panels + [
         ImageChooserPanel('picture'),
+        DocumentChooserPanel('video'),
         PageChooserPanel('next_page')
     ]
 
