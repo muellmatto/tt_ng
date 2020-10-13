@@ -7,7 +7,7 @@
         <article>
             {% for block in page.body %}
                 <section>
-                    {% if block.block_type == 'Picture' %}
+                    {% if block.block_type == 'Picture_variable' %}
                         {% image block.value.image width-1200 jpegquality-90 as img %}
                         <img src="{{ img.url }}" style="width: {{block.value.size}}%;" />
                     {% else %}
