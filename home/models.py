@@ -9,7 +9,7 @@ from wagtail.admin.edit_handlers import (
 )
 
 from wagtail.core import blocks
-from wagtail.core.fields import StreamField
+from wagtail.core.fields import RichTextField, StreamField
 from wagtail.core.models import Page
 
 from wagtail.embeds.blocks import EmbedBlock
@@ -44,9 +44,15 @@ class StartPage(Page):
         on_delete=models.SET_NULL,
         related_name='+'
     )
+    greeting = RichTextField(
+        blank=True,
+        null=True,
+        features=['h1', 'h2', 'bold', 'italic', 'link', 'align_center', 'align_right', 'strikethrough'],
+    )
     content_panels = Page.content_panels + [
         ImageChooserPanel('picture'),
         MediaChooserPanel('video'),
+        FieldPanel('greeting'),
         PageChooserPanel('next_page')
     ]
 

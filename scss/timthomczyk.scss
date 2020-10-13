@@ -19,7 +19,12 @@ body {
 h1, h2 {
     font-family: $font_family_2;
     font-weight: $font_weight_2;
+}
+h1 {
     color: $font_color;
+}
+h2 {
+    color: $accent_color;
 }
 main, footer {
     display: block;
