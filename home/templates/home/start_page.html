@@ -5,7 +5,7 @@
             <a href="{% if page.next_page %}{% pageurl page.next_page %}{% else %}#{% endif %}">
                 <article class="start_page">
                     {% if page.video %}
-                    <video src="{{ page.video.url}}" autoplay loop muted nocontrols>
+                    <video src="{{ page.video.url}}" autoplay loop muted playsinline type="video/mp4">
                         {% if page.picture %}
                             {% image page.picture max-1200x1200 jpegquality-90 %}
                         {% else %}
