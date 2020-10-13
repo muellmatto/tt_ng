@@ -5,7 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -307,19 +307,22 @@ template {
 * {
   box-sizing: border-box; }
 
+html {
+  scroll-behavior: smooth; }
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  line-height: 1.3em;
+  line-height: 1.4em;
   color: black;
   background: white; }
 
 h1, h2 {
   font-family: "Roboto", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   color: black; }
 
-main, footer, .nav_container {
+main, footer {
   display: block;
   max-width: 40rem;
   margin-left: auto;
@@ -371,18 +374,19 @@ section {
   text-decoration: none;
   color: #f08000; }
 
+#top {
+  height: 6rem; }
+
 header {
   z-index: 100;
   position: fixed;
   top: 0;
   width: 100%; }
-  header + main {
-    margin-top: 4rem; }
 
 #menu_button {
-  margin-top: 1rem; }
+  margin-top: 0.5rem; }
   #menu_button img {
-    width: 3rem;
+    width: 4rem;
     animation-name: spin;
     animation-duration: 60000ms;
     animation-iteration-count: infinite;
@@ -418,7 +422,7 @@ nav {
     nav ul li {
       padding-top: 1rem;
       display: block;
-      font-weight: 500;
+      font-weight: 600;
       /*
       text-shadow: 1px 3px 0 white,
           1px 2px white,
@@ -438,6 +442,27 @@ nav {
     nav ul a {
       text-decoration: none;
       color: #f08000; }
+
+.nav_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto; }
+  .nav_container #menu_button, .nav_container #title {
+    align-self: center; }
+  .nav_container #title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #f08000; }
+    .nav_container #title a {
+      text-decoration: none;
+      color: #f08000; }
+  .nav_container nav {
+    flex-basis: 100%;
+    flex-shrink: 0;
+    flex-grow: 0; }
 
 .start_page {
   display: flex;

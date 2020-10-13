@@ -1,4 +1,5 @@
 {% load static wagtailcore_tags %}
+        <div id="top"></div>
         <header>
             <div class="nav_container">
                 <input type="checkbox" id="menu_checkbox">
@@ -7,6 +8,7 @@
                         <img src="{% static "logo.png" %}"/>
                     </label>
                 </div>
+                <div id="title"><a href="#top">{{self.title}}</a></div>
                 <nav>
                     <ul>
                         {% with self.get_site.root_page.specific as root %}
@@ -25,6 +27,5 @@
                     </ul>
                 </nav>
             </div>
-            <h3>{{self.title}}</h3>
         </header>
 
