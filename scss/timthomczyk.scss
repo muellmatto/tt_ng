@@ -90,7 +90,7 @@ header {
 #menu_button {
     margin-top: 1rem;
     img {
-        width: 2.6rem;
+        width: 3rem;
         animation-name: spin;
         animation-duration: 60*1000ms;
         animation-iteration-count: infinite;
@@ -133,9 +133,11 @@ nav {
             display: block;
             font-weight: $font_weight_2;
             // -webkit-text-stroke: 1px white;
+            /*
             text-shadow: 1px 3px 0 white,
                 1px 2px white,
                 1px 1px white;
+            */
             /*
             text-shadow: 1px 1px 0 #000,
                 -1px 1px 0 #000,
