@@ -3,6 +3,8 @@
 
 * {
     box-sizing: border-box;
+    word-break: break-word;
+    word-wrap: break-word;
 }
 html {
     scroll-behavior: smooth;
@@ -24,6 +26,17 @@ main, footer {
     max-width: $layout_width;
     margin-left: auto;
     margin-right: auto;
+}
+p a {
+    text-decoration: none;
+    color: $font_color;
+    // border-bottom-width: 0.2rem;
+    // border-bottom-style: solid;
+    // border-bottom-color: $accent_color;
+    box-shadow: inset 0 -0.3rem 0 $accent_color;
+    &:hover {
+        color: $accent_color;
+    }
 }
 // layout padding
 h1, h2, p, .nav_container {

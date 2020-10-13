@@ -305,7 +305,9 @@ template {
   display: none; }
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  word-break: break-word;
+  word-wrap: break-word; }
 
 html {
   scroll-behavior: smooth; }
@@ -327,6 +329,13 @@ main, footer {
   max-width: 40rem;
   margin-left: auto;
   margin-right: auto; }
+
+p a {
+  text-decoration: none;
+  color: black;
+  box-shadow: inset 0 -0.3rem 0 #f08000; }
+  p a:hover {
+    color: #f08000; }
 
 h1, h2, p, .nav_container {
   padding-left: 0.5rem;
