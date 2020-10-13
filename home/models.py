@@ -68,7 +68,16 @@ class WebPage(Page):
             ),
             ( 'HTML', blocks.RawHTMLBlock() ),
             ( 'Embedded', EmbedBlock() ),
-            ( 'Picture', ImageChooserBlock()),
+            ( 'Picture_variable', blocks.StructBlock([
+                    ('image', ImageChooserBlock()),
+                    ('size', blocks.IntegerBlock(
+                        min_value=1,
+                        max_value=100,
+                        default=100,
+                        label='Größe in Prozent'
+                    )),
+                ])
+            )
         ]
     )
     content_panels = Page.content_panels + [
