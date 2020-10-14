@@ -342,6 +342,20 @@ p a {
   p a:hover {
     color: #f08000; }
 
+.left {
+  float: left;
+  padding-right: 0.5rem; }
+
+.right {
+  float: right;
+  padding-left: 0.5rem; }
+
+.left, .right {
+  max-width: 49%; }
+
+section {
+  clear: both; }
+
 h1, h2, p, .nav_container {
   padding-left: 0.5rem;
   padding-right: 0.5rem; }

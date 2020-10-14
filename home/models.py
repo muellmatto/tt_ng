@@ -63,7 +63,7 @@ class WebPage(Page):
     body = StreamField (
         [
             ( 'paragraph', blocks.RichTextBlock(
-                features=['h1', 'h2', 'bold', 'italic', 'link', 'align_center', 'align_right', 'strikethrough'],
+                features=['h1', 'h2', 'bold', 'italic', 'link', 'align_center', 'align_right', 'strikethrough', 'image'],
                 )
             ),
             ( 'HTML', blocks.RawHTMLBlock() ),

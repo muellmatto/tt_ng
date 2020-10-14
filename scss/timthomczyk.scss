@@ -43,6 +43,21 @@ p a {
         color: $accent_color;
     }
 }
+.left {
+    float: left;
+    padding-right: $layout_padding;
+}
+// richtext pictures
+.right {
+    float: right;
+    padding-left: $layout_padding;
+}
+.left, .right {
+    max-width: 49%;
+}
+section {
+    clear: both;
+}
 // layout padding
 h1, h2, p, .nav_container {
     padding-left: $layout_padding;
