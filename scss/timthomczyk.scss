@@ -58,6 +58,9 @@ p a {
 section {
     clear: both;
 }
+.multiple_pictures {
+    display: flex;
+}
 // layout padding
 h1, h2, p, .nav_container {
     padding-left: $layout_padding;

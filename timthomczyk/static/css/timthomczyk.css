@@ -356,6 +356,9 @@ p a {
 section {
   clear: both; }
 
+.multiple_pictures {
+  display: flex; }
+
 h1, h2, p, .nav_container {
   padding-left: 0.5rem;
   padding-right: 0.5rem; }

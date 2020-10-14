@@ -77,6 +77,11 @@ class WebPage(Page):
                         label='Größe in Prozent'
                     )),
                 ])
+            ),
+            ( 'Multiple_pictures', blocks.ListBlock(
+                    ImageChooserBlock(),
+                    label='Mehrere Bilder Nebeneinander'
+                )
             )
         ]
     )
