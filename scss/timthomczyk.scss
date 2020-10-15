@@ -60,6 +60,12 @@ section {
 }
 .multiple_pictures {
     display: flex;
+    list-style-type: none;
+    padding: 0;
+    img {
+        height: 100%;
+        flex-grow: 1;
+    }
 }
 // layout padding
 h1, h2, p, .nav_container {

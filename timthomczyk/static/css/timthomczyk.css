@@ -357,7 +357,12 @@ section {
   clear: both; }
 
 .multiple_pictures {
-  display: flex; }
+  display: flex;
+  list-style-type: none;
+  padding: 0; }
+  .multiple_pictures img {
+    height: 100%;
+    flex-grow: 1; }
 
 h1, h2, p, .nav_container {
   padding-left: 0.5rem;

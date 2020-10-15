@@ -11,11 +11,13 @@
                         {% image block.value.image width-1200 jpegquality-90 as img %}
                         <img src="{{ img.url }}" style="width: {{block.value.size}}%;" />
                     {% elif block.block_type == 'Multiple_pictures' %}
-                        <div class="multiple_pictures">
+                        <ul class="multiple_pictures">
                             {% for img in block.value %}
-                                {% image img width-500 jpegquality-85 %}
+                                <li>
+                                    {% image img width-500 jpegquality-85 %}
+                                </li>
                             {% endfor %}
-                        </div>
+                        </ul>
                     {% else %}
                         {% include_block block %}
                     {% endif %}
