@@ -417,13 +417,8 @@ body {
 
 h1, h2 {
   font-family: "Roboto", sans-serif;
-  font-weight: 900; }
-
-h1 {
+  font-weight: 900;
   color: black; }
-
-h2 {
-  color: #f08000; }
 
 main, footer {
   display: block;
@@ -476,6 +471,9 @@ img, video {
 
 .align_center {
   text-align: center; }
+
+.colored {
+  color: #f08000; }
 
 .portfolio_item {
   width: 400px;

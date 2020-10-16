@@ -47,7 +47,20 @@ class StartPage(Page):
     greeting = RichTextField(
         blank=True,
         null=True,
-        features=['h1', 'h2', 'bold', 'italic', 'link', 'align_center', 'align_right', 'strikethrough'],
+        features=[
+            'h1',
+            'h2',
+            'bold',
+            'italic',
+            'link',
+            'align_center',
+            'align_right',
+            'h1_align_center',
+            'h1_align_right',
+            'h2_align_center',
+            'h2_align_right',
+            'colored',
+            'strikethrough'],
     )
     content_panels = Page.content_panels + [
         ImageChooserPanel('picture'),
@@ -63,7 +76,21 @@ class WebPage(Page):
     body = StreamField (
         [
             ( 'paragraph', blocks.RichTextBlock(
-                features=['h1', 'h2', 'bold', 'italic', 'link', 'align_center', 'align_right', 'strikethrough', 'image'],
+                features=[
+                    'h1',
+                    'h2',
+                    'bold',
+                    'italic',
+                    'link',
+                    'align_center',
+                    'align_right',
+                    'h1_align_center',
+                    'h1_align_right',
+                    'h2_align_center',
+                    'h2_align_right',
+                    'colored',
+                    'strikethrough',
+                    'image'],
                 )
             ),
             ( 'HTML', blocks.RawHTMLBlock() ),
